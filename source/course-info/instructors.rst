@@ -4,7 +4,7 @@ Instructors
 Lectures
 --------
 
-Email: *lastname@physik.uni-leipzig.de*
+Email: *firstname.lastname@physik.uni-leipzig.de*
 
 * Prof. Dr. Frank Cichos
 
@@ -12,13 +12,18 @@ Email: *lastname@physik.uni-leipzig.de*
   * Office: 322
   * Phone: +0341 97 32571
 
+The October 25/27 lectures are given by 
+* Dr. Henri Franquelim 
+
+
+
 
 Seminar
 --------
 
-Email: *lastname@physik.uni-leipzig.de*
+Email: *firstname.lastname@physik.uni-leipzig.de*
 
-* Prof. Dr. Claudia Mierke
+* Dr. Giulio Isacchini
 
   * Linnéstr. 5, 04103 Leipzig 
   * Office: 326
@@ -29,16 +34,18 @@ Email: *lastname@physik.uni-leipzig.de*
 Exercise
 --------
 
-Email: *lastname@physik.uni-leipzig.de*
+Email: *firstname.middlename_lastname@physik.uni-leipzig.de*
 
-* Dr. Tobias Thalheim
-
-  * Linnéstr. 5, 04103 Leipzig 
-  * Office: 318
-  * Phone: +0341 97 32572
-
-* MSc Gordei Anchutkin
+* Dr. Julene Madariaga Marcos
 
   * Linnéstr. 5, 04103 Leipzig 
-  * Office: 127
-  * Phone: +0341 97 32581
+  * Office: xxx
+  * Phone: +0341 97 
+
+Email: *firstname.lastname@physik.uni-leipzig.de*
+
+* Dr. Patrick Irmisch (patrick.irmisch@uni-leipzig.de
+
+  * Linnéstr. 5, 04103 Leipzig 
+  * Office: 
+  * Phone: +0341 
