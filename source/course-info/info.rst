@@ -34,7 +34,7 @@ Ground Rules
 
 * The exercises will start on October 25, 2022.
 * The seminar will start on October 26, 2022.
-* The first exercise sheet will be available in the week of October 17, 2022.
+* The first exercise sheet will be available online, via a moodle-page, in the week of October 17, 2022.
 * The solutions to the exercise sheets have to be handed in before the lecture on Tuesdays in the following week.
 * For every solved problem 1 point can be obtained.
 * Prerequisite for the admission to the examination are 50 % of the total points.
