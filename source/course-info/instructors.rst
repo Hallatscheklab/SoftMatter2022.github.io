@@ -4,7 +4,7 @@ Instructors
 Lectures
 --------
 
-Email: *firstname.lastname@uni-leipzig.de*
+Email: *firstname.lastname@physik.uni-leipzig.de*
 
 * Prof. Dr. Oskar Hallatschek (substituting for Prof. Dr. Ralf Seidel)
 
