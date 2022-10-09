@@ -4,12 +4,12 @@ Instructors
 Lectures
 --------
 
-Email: *firstname.lastname@physik.uni-leipzig.de*
+Email: *firstname.lastname@uni-leipzig.de*
 
-* Prof. Dr. Frank Cichos
+* Prof. Dr. Oskar Hallatschek (substituting for Prof. Dr. Ralf Seidel)
 
   * Linnéstr. 5, 04103 Leipzig 
-  * Office: 322
+  * Office: 429
   * Phone: +0341 97 32571
 
 The October 25/27 lectures are given by 
@@ -26,8 +26,14 @@ Email: *firstname.lastname@physik.uni-leipzig.de*
 * Dr. Giulio Isacchini
 
   * Linnéstr. 5, 04103 Leipzig 
-  * Office: 326
-  * Phone: +0341 97 32541
+  * Office: xxx
+  * Phone: +0341 97 
+
+* Dr. Valentin Slepukhin
+
+  * Linnéstr. 5, 04103 Leipzig 
+  * Office: xxx
+  * Phone: +0341 97 
   
   
 
@@ -39,13 +45,13 @@ Email: *firstname.middlename_lastname@physik.uni-leipzig.de*
 * Dr. Julene Madariaga Marcos
 
   * Linnéstr. 5, 04103 Leipzig 
-  * Office: xxx
-  * Phone: +0341 97 
+  * Office: 424
+  * Phone: +0341 97 32506
 
 Email: *firstname.lastname@physik.uni-leipzig.de*
 
-* Dr. Patrick Irmisch (patrick.irmisch@uni-leipzig.de
+* Dr. Patrick Irmisch
 
   * Linnéstr. 5, 04103 Leipzig 
-  * Office: 
-  * Phone: +0341 
+  * Office: 435
+  * Phone: +0341 32558
