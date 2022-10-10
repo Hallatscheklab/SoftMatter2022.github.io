@@ -15,7 +15,7 @@ Welcome to Soft Matter Physics Lecture Website!
    course-info/info.rst
    course-info/instructors.rst
    course-info/resources.rst   
-   course-info/exam.rst
+
 
 
 
