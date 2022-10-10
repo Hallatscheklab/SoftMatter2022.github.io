@@ -18,12 +18,12 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Soft Matter Lecture'
-copyright = '2021, Frank Cichos, Ralf Seidel'
-author = 'Frank Cichos, Ralf Seidel'
+copyright = '2022, Oskar Hallatschek, Frank Cichos, Ralf Seidel'
+author = 'Oskar Hallatschek, Frank Cichos, Ralf Seidel'
 master_doc = 'index'
 
 # The full version, including alpha/beta/rc tags
-release = '21'
+release = '22'
 
 
 # -- General configuration ---------------------------------------------------
