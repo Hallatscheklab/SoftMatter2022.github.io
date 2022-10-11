@@ -200,7 +200,263 @@
           </label>
         </div>
         <article role="main">
-          <div class="admonition note">
+          
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt .copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+.jp-RenderedHTMLCommon table,
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.jp-RenderedHTMLCommon thead,
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+.jp-RenderedHTMLCommon tr,
+.jp-RenderedHTMLCommon th,
+.jp-RenderedHTMLCommon td,
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.jp-RenderedHTMLCommon th,
+div.rendered_html th {
+  font-weight: bold;
+}
+.jp-RenderedHTMLCommon tbody tr:nth-child(odd),
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.jp-RenderedHTMLCommon tbody tr:hover,
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<div class="admonition note">
 <p>This page was generated from <cite>notebooks/L1/2_Intro_to_Stat_Phys_OH.ipynb</cite>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/SoftMatterPhysics/main?urlpath=tree/source/notebooks/L1/2_Intro_to_Stat_Phys_OH.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
@@ -230,22 +486,22 @@ assumption. The breaking of ergodicity is topic of active research. Ergodicity i
 </section>
 <section id="Energy-exchange-–-canonical-ensemble">
 <h2>Energy exchange – canonical ensemble<a class="headerlink" href="#Energy-exchange-–-canonical-ensemble" title="Permalink to this headline">#</a></h2>
-<p>Most soft matter systems are closed but not isolated - they trade energy and volume with the environment (a.k.a. <em>bath</em>, <em>sorroundings</em>). What can we say about <span class="math notranslate nohighlight">\(P(\nu_S)\)</span> in those cases?</p>
-<p>System (S) + Bath (B) = Composite system with fixed E, V, N.</p>
-<ul class="simple">
-<li><p>All states with <span class="math notranslate nohighlight">\(E_S+E_B=E\)</span> are equally likely.</p></li>
-<li><p>To reach a high energy state, S has to “steal” energy from B.</p></li>
-</ul>
-<p>What’s the probability <span class="math notranslate nohighlight">\(P(\nu_S)\)</span> of system state <span class="math notranslate nohighlight">\(\nu_S\)</span> irrespective of the state of the bath?</p>
+<p>Most soft matter systems are closed but not isolated - they trade energy and volume with the environment (a.k.a. <em>bath</em>, <em>sorroundings</em>). What can we say about <span class="math notranslate nohighlight">\(P(\nu_s)\)</span> in those cases?</p>
+<p>System (s) + Bath (b) = Composite system with fixed E, V, N.</p>
+<ul>
+<li><p>All states with <span class="math notranslate nohighlight">\(E_s+E_b=E\)</span> are equally likely.</p></li>
+<li><p>To reach a high energy state, s has to “steal” energy from b. What’s the probability <span class="math notranslate nohighlight">\(P(\nu_s)\)</span> of system state <span class="math notranslate nohighlight">\(\nu_s\)</span> irrespective of the state of the bath?</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[P(\nu_S)=\sum_{\nu_B} P(\nu_S,\nu_B)=\frac{\Omega_b(E-E_S)}{\Omega(E,V,N)}\]</div>
+\[P(\nu_s)=\sum_{\nu_b} P(\nu_s,\nu_b)=\frac{\Omega_b(E-E_s)}{\Omega(E,V,N)}\]</div>
 </div>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[\boxed{\rightarrow P(\nu_S)\propto \Omega_b(E-E_S)}\]</div>
+\[\boxed{\rightarrow P(\nu_s)\propto \Omega_b(E-E_s)}\]</div>
 </div>
 <p><strong>The multiplicity of the bath controls the state of the system.</strong></p>
+</li>
+</ul>
 <p>Or, using the <strong>Boltzmann entropy</strong></p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
@@ -254,36 +510,36 @@ assumption. The breaking of ergodicity is topic of active research. Ergodicity i
 <p>we can write</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[P(\nu_S)\propto e^{k_B^{-1}S_B(E-E_S)}.\]</div>
+\[P(\nu_s)\propto e^{k_B^{-1}S_b(E-E_s)}.\]</div>
 </div>
 <p>When the bath is very big (thermodynamic limit), we can Taylor expand the exponent,</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[S_B(E-E_S)=S_B(E)+\left(\frac{\partial S}{\partial E}\right)_{V,N}(-E_S)+\cdots\]</div>
+\[S_s(E-E_s)=S_b(E)+\left(\frac{\partial S}{\partial E}\right)_{V,N}(-E_s)+\cdots\]</div>
 </div>
 <p>Inserting above yields</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[\boxed{P(\nu_S)\propto \exp\left[\text{const.}-k_B^{-1}\left(\frac{\partial S_B}{\partial E}\right)_{V, N}\right]\propto e^{-b E_S}} .\]</div>
+\[\boxed{P(\nu_s)\propto \exp\left[\text{const.}-k_B^{-1}\left(\frac{\partial S_b}{\partial E}\right)_{V, N}\right]\propto e^{-b E_s}} .\]</div>
 </div>
-<p>The factor <span class="math notranslate nohighlight">\(e^{-b E_S}\)</span> is the <strong>Boltzmann factor</strong>, if we identify <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(\beta_B\equiv (k_B T)^{-1}\)</span>.</p>
+<p>The factor <span class="math notranslate nohighlight">\(e^{-b E_s}\)</span> is the <strong>Boltzmann factor</strong>, if we identify <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(\beta_b\equiv (k_B T)^{-1}\)</span>.</p>
 <p>Thus,</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[\beta_B\equiv \left(\frac{\partial \ln \Omega_B}{\partial E}\right)_{V, N}=\frac 1k_B \left(\frac{\partial S_B}{\partial E}\right)_{V, N}.\]</div>
+\[\beta_b\equiv \left(\frac{\partial \ln \Omega_b}{\partial E}\right)_{V, N}=\frac 1k_B \left(\frac{\partial S_b}{\partial E}\right)_{V, N}.\]</div>
 </div>
 <p>Equivalently,</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[\boxed{T_B\equiv \left(\frac{\partial S_B}{\partial E}\right)_{V, N}^{-1}}\]</div>
+\[\boxed{T_b\equiv \left(\frac{\partial S_b}{\partial E}\right)_{V, N}^{-1}}\]</div>
 </div>
 <p>is the <strong>thermodynamic definition</strong> of the temperature of the bath.</p>
 <p><strong>Implication: The likelihood ratio of two microstates is given by the ratio of their Boltzmann factors</strong></p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[\frac{P(\nu_s^{(1)})}{P(\nu_s^{(2)})}=e^{-\frac{E_S^{(2)}-E_S^{(1)}}{k_B T_b}}=e^{-\frac{\Delta E}{k_B T_b}}\]</div>
+\[\frac{P(\nu_s^{(1)})}{P(\nu_s^{(2)})}=e^{-\frac{E_s^{(2)}-E_s^{(1)}}{k_B T_b}}=e^{-\frac{\Delta E}{k_B T_b}}\]</div>
 </div>
-<p>Exercise: Compare <span class="math notranslate nohighlight">\(k_B T\)</span> with characteristic energy scales. * E.g. potential energy differences due to gravity, <span class="math notranslate nohighlight">\(\Delta E = m g h\)</span>, imply</p>
+<p>Exercise: Compare <span class="math notranslate nohighlight">\(k_B T_b\)</span> with characteristic energy scales. * E.g. potential energy differences due to gravity, <span class="math notranslate nohighlight">\(\Delta E = m g h\)</span>, imply</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
 \[\frac{P(\nu_s^{(1)})}{P(\nu_s^{(2)})}=e^{-\frac{h}{\lambda}}, \qquad \text{in terms of the &quot;scale height&quot;} \lambda\equiv \frac{k_B T}{m g}\approx 8 \text{km}.\]</div>
@@ -292,6 +548,14 @@ assumption. The breaking of ergodicity is topic of active research. Ergodicity i
 <li><p>Bending of biopolymers</p></li>
 <li><p>Electrostatic repulsion, <span class="math notranslate nohighlight">\(\Delta E = \frac{q^2}{4\pi\epsilon_0 \ell_B}\)</span></p></li>
 </ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </section>
 </section>
 
