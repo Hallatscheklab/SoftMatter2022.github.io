@@ -32,11 +32,10 @@ We will therefore offer one exercise class per week (starting October 25).
 Ground Rules
 ------------
 
-* The exercises will start on October 25, 2022.
-* The seminar will start on October 26, 2022.
+* The seminar will start on October 19, 2022, with an introductory lecture.
 * The first exercise sheet will be available online, via a moodle-page, in the week of October 17, 2022.
 * The solutions to the exercise sheets have to be handed in before the lecture on Tuesdays in the following week.
-* For every solved problem 1 point can be obtained.
+* The first practice session is on October 25, 2022.
 * Prerequisite for the admission to the examination are 50 % of the total points.
 * Examination: 180 min written (knowledge + problem solving), 2/3 of the mark + seminar talk, 1/3 of the mark
 * The exam will take place in February
