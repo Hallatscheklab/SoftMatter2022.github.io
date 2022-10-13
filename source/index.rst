@@ -21,14 +21,15 @@ Welcome to Soft Matter Physics Lecture Website!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Lecture 1:
+   :caption: Lecture 1-2:
 
    notebooks/L1/2_Intro_to_Stat_Phys_OH.ipynb
+   notebooks/L2/Intro_to_Stat_Phys_2_OH.ipynb
 
 ..
    .. toctree::
       :maxdepth: 2
-      :caption: Lecture 2:
+      :caption: Lecture 1-2:
 
       notebooks/L2/3_Statistical_Physics_Definitions.ipynb
 
