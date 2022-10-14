@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -195,7 +195,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -489,6 +489,29 @@ depicted below.</p>
 <p>To summarize: At equilibrium, large systems coupled to a bath are almost deterministically found at a particular energy, the internal energy, where the temperature of bath and system are equal.</p>
 <p>If a large system is intially out of equilibrium, say it has a larger or smaller energy than <span class="math notranslate nohighlight">\(U\)</span>, it will gradually move towards the internal energy as a result of its internal dynamics towards higher probability (towards the peak). This is indicated by the blue arrow in my sketch above, indicating that <em>spontaneous</em> reactions always proceed towards the peak. Any reaction going away from the peak, towards lower probability, requires some kind of work and would not happen by itself (more
 precisely, would occur only with very low probability).</p>
+<section id="Partition-function">
+<h2>Partition function<a class="headerlink" href="#Partition-function" title="Permalink to this headline">#</a></h2>
+<p>To fully determine the probability <span class="math notranslate nohighlight">\(P(E_s)\)</span> to observe our system at a given energy <span class="math notranslate nohighlight">\(E_s\)</span>,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[P(E_s)=\frac{\Omega_s(E_s)\exp(-\beta_b E_s)}{Z}\]</div>
+</div>
+<p>we still need to evaluate a normalization constant <span class="math notranslate nohighlight">\(Z\)</span>,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[Z\equiv \int dE_s \Omega_s(E_s)\exp(-\beta_b E_s)\]</div>
+</div>
+<p>.</p>
+<p>In large systems, the integral is dominated by the value of the integrand at the peak energy <span class="math notranslate nohighlight">\(U\)</span>,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[Z\approx \Omega_s(U) \exp(\beta_bU)\]</div>
+</div>
+<p>We define the free energy <span class="math notranslate nohighlight">\(A\)</span> as</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[A\equiv -k_\mathrm{B}\ln Z=-k_\mathrm{B}\ln \Omega_s(U)+U=U-TS_s\]</div>
+</div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -497,6 +520,7 @@ precisely, would occur only with very low probability).</p>
 </pre></div>
 </div>
 </div>
+</section>
 </section>
 
         </article>
@@ -526,7 +550,7 @@ precisely, would occur only with very low probability).</p>
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Oct 13, 2022</div>
+              Last updated on Oct 14, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">
@@ -537,8 +561,27 @@ precisely, would occur only with very low probability).</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Meaning of equilibrium</a><ul>
+<li><a class="reference internal" href="#Partition-function">Partition function</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

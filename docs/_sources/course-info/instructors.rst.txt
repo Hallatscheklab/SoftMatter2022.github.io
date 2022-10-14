@@ -40,7 +40,7 @@ Email: *firstname.lastname@physik.uni-leipzig.de*
 Exercise
 --------
 
-Email: *firstname.middlename_lastname@physik.uni-leipzig.de*
+Email: *firstname.middlename_lastname@uni-leipzig.de*
 
 * Dr. Julene Madariaga Marcos
 
@@ -48,9 +48,9 @@ Email: *firstname.middlename_lastname@physik.uni-leipzig.de*
   * Office: 424
   * Phone: +0341 97 32506
 
-Email: *firstname.lastname@physik.uni-leipzig.de*
+Email: *firstname.lastname@uni-leipzig.de*
 
-* Dr. Patrick Irmisch
+* Patrick Irmisch
 
   * Linnéstr. 5, 04103 Leipzig 
   * Office: 435
