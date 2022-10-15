@@ -33,7 +33,7 @@ Ground Rules
 ------------
 
 * The seminar will start on October 19, 2022, with an introductory lecture.
-* The first exercise sheet will be available online, via a moodle-page, in the week of October 17, 2022.
+* The first exercise sheet will be available online, via `this moodle-page <https://moodle2.uni-leipzig.de/course/view.php?id=41092>`, in the week of October 17, 2022.
 * The solutions to the exercise sheets have to be handed in before the lecture on Tuesdays in the following week.
 * The first practice session is on October 25, 2022.
 * Prerequisite for the admission to the examination are 50 % of the total points.
