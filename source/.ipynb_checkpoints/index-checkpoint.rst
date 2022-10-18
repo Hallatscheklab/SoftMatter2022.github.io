@@ -25,6 +25,7 @@ Welcome to Soft Matter Physics Lecture Website!
 
    notebooks/L1/2_Intro_to_Stat_Phys_OH.ipynb
    notebooks/L2/Intro_to_Stat_Phys_2_OH.ipynb
+   notebooks/L3/1_Equipartition.ipynb
 
 ..
    .. toctree::

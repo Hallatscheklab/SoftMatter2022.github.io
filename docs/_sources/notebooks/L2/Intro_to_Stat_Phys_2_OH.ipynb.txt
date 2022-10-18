@@ -122,6 +122,31 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Spontaneous Reactions"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "A change in the macrostate of the system is said to happen spontaneously if we do not need to apply a (thermodynamic) driving force to induce the change. It is then clear that spontaneous reactions cannot increase the entropy of the world, $0\\leq\\Delta S_{\\text{tot}},$ which is one formulation fo the second law. \n",
+    "\n",
+    "The total entropy change can be decomposed into  entropy changes $\\Delta S_s$ and $\\Delta S_b$ of system and bath, respectively. For a large bath, we can Taylor expand the bath entropy change $\\Delta S_b=\\Delta E_b/T_b$ in terms of the energy change $\\Delta E_b$ of the bath (just as we did to derive the Boltzmann factor). In terms of the the *heat* $Q\\equiv-\\Delta E_b$ added to the system, we thus have\n",
+    "$$0\\leq\\Delta S_{\\text{tot}}=\\Delta S_s+\\Delta S_b=\\Delta S_s-\\frac{Q}{T_b}$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Thus, we obtain the **Clausius inequality**\n",
+    "$$\\boxed{\\Delta S_s\\geq\\frac{Q}{T_b}}$$"
+   ]
+  },
+  {
    "cell_type": "code",
    "execution_count": null,
    "metadata": {},
