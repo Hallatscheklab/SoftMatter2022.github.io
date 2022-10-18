@@ -298,6 +298,39 @@ assumption. The breaking of ergodicity is topic of active research. Ergodicity i
 <p>Thus, increasing your elevation by 8 km approximately leads to an e-fold reduction of the air density. (“approximately”, because (i) the temperature changes with height, (ii) molecules interact and (ii) the atmosphere is not in equilibrium).</p>
 <p>So far, we just cared about ratios of probabilities. In general it is much harder to compute absolute probabilities, which requires computing a normalization constant – the partition function. In the present one-dimensional case, however, we can do it easily: The probability <span class="math notranslate nohighlight">\(p(z)\)</span> for finding the particle at position <span class="math notranslate nohighlight">\(z\)</span> is given by <span class="math notranslate nohighlight">\(p(z)=\frac{1}{\lambda}\exp\left( -\frac{z}{\lambda}\right)\)</span>, which is properly normalized, <span class="math notranslate nohighlight">\(\int_0^\infty p(z)=1\)</span>.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title"><strong>Example: Two-level-system</strong></p>
+<p>As another frequent application of Boltzmann’s law are state populations of two state systems, as we find them frequently in physics, e.g., for spin systems. Such two level spin systems are, for example, very important for nuclear magnetic resonance (NMR), which is an important tool to study the structure and dynamics of soft matter.</p>
+<img alt="Two Level" src="../../_images/two_level1.png" />
+<p>Consider the image above, where a single energy level at zero magnetic field (<span class="math notranslate nohighlight">\(B=0\)</span>) splits into two energy levels due to the interaction of a proton spin (red arrow) with the external magnetic field.</p>
+<p>The magnetic moment of the proton spin may take two expectation values in the magnetic field, which are characterized by the magnetic quantum number <span class="math notranslate nohighlight">\(m_Z=\pm 1/2\)</span>. The magnetic moment projected along the magnetic field direction is then</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mu_Z=\gamma m_Z \hbar\]</div>
+</div>
+<p>and the energy of the states</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[E(m_Z)=-\mu_Z B=-\gamma m_Z \hbar B\]</div>
+</div>
+<p>with <span class="math notranslate nohighlight">\(\gamma=2.675222005\times 10^{8}\; \mathrm{s}^{-1} \mathrm{T}^{-1}\)</span> being the gyromagnetic ratio of the proton. The energy difference for a nonzero magnetic field is therefore given by</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Delta E=\gamma \hbar B=\hbar \omega_\mathrm{L}\]</div>
+</div>
+<p>which results for a magnetic field of <span class="math notranslate nohighlight">\(B=1\; \mathrm{T}\)</span> in <span class="math notranslate nohighlight">\(\Delta E\approx 1.76\times 10^{-7}\;{\rm eV}\)</span> or a Larmor frequency of <span class="math notranslate nohighlight">\(\omega_\mathrm{L}=42\; {\rm MHz}\)</span>. This energy difference is almost negligible as compared to the thermal energy at room temperature <span class="math notranslate nohighlight">\(k_\mathrm{B}T=2.6\times 10^{-2}\;{\rm eV}\)</span>. Yet, this small energy difference is used to give the contrast in NMR and related techniques such as MRI.</p>
+<p>Using the Boltzmann distribution we can now calculate the ratio of the population of spins in the lower or excited state</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\frac{N_{-\frac{1}{2}}}{N_{+\frac{1}{2}}}=\exp\left (-\frac{\Delta E}{k_\mathrm{B} T} \right )\]</div>
+</div>
+<p>which is very close to one:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\frac{N_{-\frac{1}{2}}}{N_{+\frac{1}{2}}}=0.99999332.\]</div>
+</div>
+<p>If you consider now a volume of <span class="math notranslate nohighlight">\(V=1\;{\rm {\mu m}}^3\)</span> water, then you would roughly have about <span class="math notranslate nohighlight">\(N=6.7\times 10^{19}\)</span> protons. This then means that the excess number of protons in the excited state is just <span class="math notranslate nohighlight">\(N_{+\frac{1}{2}}-N_{-\frac{1}{2}}=4.5\times 10^{12}\)</span>, which is extremely low. Thus, to detect something in NMR or MRI, a certain number of protons in the volume is required.</p>
+</div>
 </section>
 </section>
 
