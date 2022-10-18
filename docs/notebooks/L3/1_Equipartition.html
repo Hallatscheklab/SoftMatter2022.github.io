@@ -224,7 +224,7 @@ P\left(p_{x}\right)=\frac{\mathrm{e}^{-\beta\left(p_{x}^{2} / 2 m\right)}}{\sum_
 \end{equation}</span></p>
 <p>We can thus calculate the mean energy by summing up (or integrating when going to continuous states) over alls possible momenta</p>
 <p><span class="math">\begin{equation}
-\sum_{\text {states }} \rightarrow \int_{-\infty}^{\infty} \mathrm{d} p_{x}=\frac 12 k_\mathrm{B}T
+\sum_{\text {states }} \rightarrow \int_{-\infty}^{\infty} \mathrm{d} p_{x}
 \end{equation}</span></p>
 <p>This yields</p>
 <p><span class="math">\begin{equation}
@@ -232,7 +232,7 @@ Z\equiv\int_{-\infty}^{\infty} \mathrm{e}^{-\beta p_{x}^{2} / 2 m} \mathrm{~d} p
 \end{equation}</span></p>
 <p>A simple but frequently used trick shows that the mean energy (like many other thermodynamic averages) can be obtained as a derivative of the logarithm of the partition function:</p>
 <p><span class="math">\begin{equation}
-\langle E\rangle=-\frac{\partial \ln Z}{\partial\beta}=\frac{\int_{-\infty}^{\infty} \frac{p_{x}^{2}}{2 m} \mathrm{e}^{-\beta\left(p_{x}^{2} / 2 m\right)} \mathrm{d} p_{x}}{\sqrt{2 m \pi / \beta}}
+\langle E\rangle=\frac{\int_{-\infty}^{\infty} \frac{p_{x}^{2}}{2 m} \mathrm{e}^{-\beta\left(p_{x}^{2} / 2 m\right)} \mathrm{d} p_{x}}{Z}=-\frac{\partial \ln Z}{\partial\beta}=\frac 12 k_\mathrm{B}T
 \end{equation}</span></p>
 <p>This is the mean energy per degree of freedom. One can show that each degree of freedom, independent of the object (atom, colloid, parking car) is carrying this mean energy.</p>
 <div class="admonition warning">
