@@ -26,6 +26,9 @@ Welcome to Soft Matter Physics Lecture Website!
    notebooks/L1/2_Intro_to_Stat_Phys_OH.ipynb
    notebooks/L2/Intro_to_Stat_Phys_2_OH.ipynb
    notebooks/L3/1_Equipartition.ipynb
+   notebooks/L4/2_Gibbs_Distribution.ipynb
+   notebooks/L4/2_Chemical_Potential.ipynb
+   notebooks/L4/1_Osmotic_Pressure.ipynb
 
 ..
    .. toctree::
@@ -39,14 +42,11 @@ Welcome to Soft Matter Physics Lecture Website!
       :caption: Lecture 3:
 
       notebooks/L3/1_Equipartition.ipynb
-      notebooks/L3/2_Chemical_Potential.ipynb
 
    .. toctree::
       :maxdepth: 2
       :caption: Lecture 4:
 
-      notebooks/L4/1_Osmotic_Pressure.ipynb
-      notebooks/L4/2_Gibbs_Distribution.ipynb
 
    .. toctree::
       :maxdepth: 2
