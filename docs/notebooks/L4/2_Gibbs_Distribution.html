@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Chemical Potential" href="2_Chemical_Potential.html" /><link rel="prev" title="Equipartition" href="../L3/1_Equipartition.html" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.09.29"/>
-        <title>Gibbs Distribution - Soft Matter Lecture 22 documentation</title>
+        <title>Particle exchange and chemical potential - Soft Matter Lecture 22 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -170,7 +170,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../L2/Intro_to_Stat_Phys_2_OH.html#Spontaneous-Reactions">Spontaneous Reactions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L3/1_Equipartition.html">Equipartition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L3/1_Equipartition.html#When-a-Macrostate-is-a-Microstate">When a Macrostate is a Microstate</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Gibbs Distribution</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Particle exchange and chemical potential</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_Chemical_Potential.html">Chemical Potential</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_Osmotic_Pressure.html">Osmotic Pressure</a></li>
 </ul>
@@ -201,7 +201,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -211,44 +211,71 @@
 <p>This page was generated from <cite>notebooks/L4/2_Gibbs_Distribution.ipynb</cite>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/SoftMatterPhysics/main?urlpath=tree/source/notebooks/L4/2_Gibbs_Distribution.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
-<section id="Gibbs-Distribution">
-<h1>Gibbs Distribution<a class="headerlink" href="#Gibbs-Distribution" title="Permalink to this headline">#</a></h1>
-<p>So far, we have considered closed systems and derived and studied the Boltzmann distribution. Now our systems are open and the particle number might change. The Boltzmann distribution is therefore not anymore sufficient to describe the probability to find a system with an energy <span class="math notranslate nohighlight">\(E_\mathrm{s}\)</span> and a particle number <span class="math notranslate nohighlight">\(N_\mathrm{s}\)</span> in contact with a reservoir. To derive a distribution for this new situation, we can use one of the ways, which also allowed the derivation of the Boltzmann
-distribution. This route is, again, considering the ratio of the proababilities of two arbitrary states of the system (index s) which is equal to the ratio of the numbers of possible states of the reservoir (index <span class="math notranslate nohighlight">\(r\)</span>):</p>
-<p><span class="math">\begin{equation}
-\frac{p(E_\mathrm{s}^{(1)},N_\mathrm{s}^{(1)})}{p(E_\mathrm{s}^{(2)},N_\mathrm{s}^{(2)})}=\frac{W_\mathrm{r}(E_\mathrm{tot}-E_\mathrm{s}^{(1)},N_\mathrm{tot}^{(1)})}{W_\mathrm{r}(E_\mathrm{tot}-E_\mathrm{s}^{(2)},N_\mathrm{tot}^{(2)})}
-\end{equation}</span></p>
-<p>Hereby, the <span class="math notranslate nohighlight">\(E_\mathrm{s}^{(i)}, N_\mathrm{s}^{(i)}\)</span> denote the energy and the number of particles in the system in the <span class="math notranslate nohighlight">\(i\)</span>th state. <span class="math notranslate nohighlight">\(W_\mathrm{r}\)</span> indicates the number of available states to the reservoir, when the system is in a specific energy state with a specific number of particles. Similar to the derivation of the Boltzmann distribution, we can now assert that the total number of available states of the system and the reservoir is given by</p>
-<p><span class="math">\begin{equation}
-W_\mathrm{tot}(E_\mathrm{tot}-E_\mathrm{s}^{(1)},N_\mathrm{tot}-N_\mathrm{s}^{(1)})=1\times W_\mathrm{r}(E_\mathrm{tot}-E_\mathrm{s}^{(1)},N_\mathrm{tot}-N_\mathrm{s}^{(1)}).
-\end{equation}</span></p>
-<p>Note that the system is in exactly one state in this case. Utilizing again that <span class="math notranslate nohighlight">\(S=k_\mathrm{B} \ln(W)\)</span> or <span class="math notranslate nohighlight">\(W=\exp(S/k_\mathrm{B})\)</span>, we find</p>
-<p><span class="math">\begin{equation}
-\frac{W_\mathrm{r}^{(1)}}{W_\mathrm{r}^{(2)}}=\frac{\exp(S_\mathrm{r}^{(1)}/k_\mathrm{B})}{\exp(S_\mathrm{r}^{(2)}/k_\mathrm{B})}.
-\end{equation}</span></p>
-<p>Once more, we can use a first order expansion to get</p>
-<p><span class="math">\begin{equation}
-S_\mathrm{r}(E_\mathrm{tot}-E_\mathrm{s},N_\mathrm{tot}-N_\mathrm{s})\approx S_\mathrm{r}(E_\mathrm{tot},N_\mathrm{tot})-\frac{\partial S_\mathrm{r}}{\partial E}E_\mathrm{s}-\frac{\partial S_\mathrm{r}}{\partial N}E_{N_\mathrm{s}}.
-\end{equation}</span></p>
-<p>The partial derivatives can be converted with the help of the known thermodynamic relations</p>
-<p><span class="math">\begin{equation}
-\frac{\partial S_\mathrm{r}}{\partial E}\bigg|_{V,N} =\frac{1}{T}
-\end{equation}</span></p>
-<p>and</p>
-<p><span class="math">\begin{equation}
-\frac{\partial S_\mathrm{r}}{\partial N}\bigg|_{V,E}=-\frac{\mu}{T}
-\end{equation}</span></p>
-<p>which finally yields the Gibbs distribution:</p>
-<div class="admonition warning">
-<p class="admonition-title"><strong>Gibbs distribution</strong></p>
-<p><span class="math">\begin{equation}
-p(E_\mathrm{s}^{(1)},N_\mathrm{s}^{(1)})=\frac{1}{Z}\exp\left ( -\frac{E_\mathrm{s}^{(1)}-\mu N_\mathrm{s}^{(1)} }{k_\mathrm{B} T} \right )
-\end{equation}</span></p>
-<p>with the <strong>grand partition function</strong></p>
-<p><span class="math">\begin{equation}
-Z=\sum_{i}\exp \left ( -\frac{E_\mathrm{s}^{(i)}-\mu N_\mathrm{s}^{(i)}}{k_\mathrm{B} T}\right ).
-\end{equation}</span></p>
+<section id="Particle-exchange-and-chemical-potential">
+<h1>Particle exchange and chemical potential<a class="headerlink" href="#Particle-exchange-and-chemical-potential" title="Permalink to this headline">#</a></h1>
+<p>So far, we have considered closed systems and derived and studied the Boltzmann distribution. Now our systems are open and the particle number might change. To derive the probability to find a system with an energy <span class="math notranslate nohighlight">\(E_\mathrm{s}\)</span> and a particle number <span class="math notranslate nohighlight">\(N_\mathrm{s}\)</span>, we retrace the steps that led us to the Boltzmann distribution, except for allowing the system to trade particles with the bath.</p>
+<p>Again, the probability to find a system with energy <span class="math notranslate nohighlight">\(E_\mathrm{s}\)</span> and particle number <span class="math notranslate nohighlight">\(N_\mathrm{s}\)</span> is proportional to the number of bath states,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[P(\nu_s)\propto e^{k_\mathrm{B}^{-1}S_b(E-E_s,N-N_s)}\;.\]</div>
 </div>
+<p>Next we Taylor expand the entropy of the large bath,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[k_\mathrm{B}^{-1}S_b(E-E_s,N-N_s)=\mathrm{const.}-\beta_b(E_s-\mu_b N_s)\;,\]</div>
+</div>
+<p>where we have the usual thermodynamic definition of temperature</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[T_b^{-1}=\frac{\partial S_b}{\partial E}\]</div>
+</div>
+<p>and introduced the <strong>chemical potential</strong></p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\mu_b=-T_b \frac{\partial S_b}{\partial N}\;.\]</div>
+</div>
+<p>With these definitions, we obtain the <strong>Gibbs distribution</strong></p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[P(\nu_s)=Z^{-1}e^{-\beta_b\left[E_s-\mu_b N_s\right]}\]</div>
+</div>
+<p>where the grand canonical partition function <span class="math notranslate nohighlight">\(Z\)</span> is given by the sum</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[Z=\sum_i e^{-\beta_b\left[E_s^{(i)}-\mu_b N_s^{(i)}\right]}\]</div>
+</div>
+<p>over all microstates <span class="math notranslate nohighlight">\(i\)</span>.</p>
+<p>To obtain the probability to find the system at energy <span class="math notranslate nohighlight">\(E_s\)</span> and <span class="math notranslate nohighlight">\(N_s\)</span>, we have multiply the Gibbs distribution with the multiplicity of system states,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[P(E_s,N_s)\propto e^{k_\mathrm{B}^{-1}S_s(E_s,N_s)}e^{-\beta_b\left[E_s-\mu_b N_s\right]}\;.\]</div>
+</div>
+<p>If the system is large, this distribution has a pronounced peak, such that the system will have an almost deterministic energy <span class="math notranslate nohighlight">\(U\)</span> and particle number <span class="math notranslate nohighlight">\(N\)</span>. The conditions for the maximum imply</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[T_b=T_s\qquad \mu_b=\mu_s\;.\]</div>
+</div>
+<p>Thus, temperatures and chemical potentials of bath and system are equal at equilibrium.</p>
+<p>Consideration of spontaneous processes shows that the equilibrium minimizes the grand potential</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\Sigma=-k_\mathrm{B}T\ln Z=U-T S- \mu N\]</div>
+</div>
+<p>.</p>
+<section id="Volume-exchange-and-pressure">
+<h2>Volume exchange and pressure<a class="headerlink" href="#Volume-exchange-and-pressure" title="Permalink to this headline">#</a></h2>
+<p>In complete analogy, we can also treat the case where bath and system trade energy and volume, which we briefly summarize for completeness. One obtains the microstate distribution</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[P(\nu_s)\propto e^{-\beta_b\left[E_s+p_b dV_s\right]}\]</div>
+</div>
+<p>with the equilibrium condition of equal pressures <span class="math notranslate nohighlight">\(p_b=p_s\)</span>.</p>
+<p>Consideration of spontaneous processes shows that the equilibrium minimizes the Gibbs free energy</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[G=U-T S+PV=\sum_i \mu_i N_i \;,\]</div>
+</div>
+<p>where the last sum goes over all particle species <span class="math notranslate nohighlight">\(i\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title"><strong>Ligand Binding</strong></p>
 <p>As an example, we have a look at the binding of a ligand (green) to a receptor, which is indicated in the figure below.</p>
@@ -282,6 +309,7 @@ Z=\sum_{\sigma=0}^{1}\exp\left ( -\beta (\varepsilon_\mathrm{b} \sigma- \mu \sig
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
 </script></section>
+</section>
 
         </article>
       </div>
@@ -329,8 +357,27 @@ Z=\sum_{\sigma=0}^{1}\exp\left ( -\beta (\varepsilon_\mathrm{b} \sigma- \mu \sig
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Particle exchange and chemical potential</a><ul>
+<li><a class="reference internal" href="#Volume-exchange-and-pressure">Volume exchange and pressure</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
