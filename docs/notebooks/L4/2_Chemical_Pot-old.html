@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Osmotic Pressure" href="1_Osmotic_Pressure.html" /><link rel="prev" title="Particle exchange and chemical potential" href="2_Gibbs_Distribution.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.09.29"/>
-        <title>Equilibration of the chemical potential - Soft Matter Lecture 22 documentation</title>
+        <title>Chemical Potential - Soft Matter Lecture 22 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -164,14 +164,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../course-info/resources.html">Resources</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Lecture 1-2:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../L1/2_Intro_to_Stat_Phys_OH.html">Whirlwind recap of (equilibrium) statistical physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L2/Intro_to_Stat_Phys_2_OH.html">Meaning of equilibrium</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L2/Intro_to_Stat_Phys_2_OH.html#Spontaneous-Reactions">Spontaneous Reactions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L3/1_Equipartition.html">Equipartition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L3/1_Equipartition.html#When-a-Macrostate-is-a-Microstate">When a Macrostate is a Microstate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_Gibbs_Distribution.html">Particle exchange and chemical potential</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Equilibration of the chemical potential</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_Chemical_Potential.html">Equilibration of the chemical potential</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_Osmotic_Pressure.html">Osmotic Pressure</a></li>
 </ul>
 
@@ -207,270 +207,43 @@
           </label>
         </div>
         <article role="main">
-          
-<style>
-/* CSS for nbsphinx extension */
-
-/* remove conflicting styling from Sphinx themes */
-div.nbinput.container div.prompt *,
-div.nboutput.container div.prompt *,
-div.nbinput.container div.input_area pre,
-div.nboutput.container div.output_area pre,
-div.nbinput.container div.input_area .highlight,
-div.nboutput.container div.output_area .highlight {
-    border: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: none;
-}
-
-div.nbinput.container > div[class*=highlight],
-div.nboutput.container > div[class*=highlight] {
-    margin: 0;
-}
-
-div.nbinput.container div.prompt *,
-div.nboutput.container div.prompt * {
-    background: none;
-}
-
-div.nboutput.container div.output_area .highlight,
-div.nboutput.container div.output_area pre {
-    background: unset;
-}
-
-div.nboutput.container div.output_area div.highlight {
-    color: unset;  /* override Pygments text color */
-}
-
-/* avoid gaps between output lines */
-div.nboutput.container div[class*=highlight] pre {
-    line-height: normal;
-}
-
-/* input/output containers */
-div.nbinput.container,
-div.nboutput.container {
-    display: -webkit-flex;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 100%;
-}
-@media (max-width: 540px) {
-    div.nbinput.container,
-    div.nboutput.container {
-        flex-direction: column;
-    }
-}
-
-/* input container */
-div.nbinput.container {
-    padding-top: 5px;
-}
-
-/* last container */
-div.nblast.container {
-    padding-bottom: 5px;
-}
-
-/* input prompt */
-div.nbinput.container div.prompt pre {
-    color: #307FC1;
-}
-
-/* output prompt */
-div.nboutput.container div.prompt pre {
-    color: #BF5B3D;
-}
-
-/* all prompts */
-div.nbinput.container div.prompt,
-div.nboutput.container div.prompt {
-    width: 4.5ex;
-    padding-top: 5px;
-    position: relative;
-    user-select: none;
-}
-
-div.nbinput.container div.prompt > div,
-div.nboutput.container div.prompt > div {
-    position: absolute;
-    right: 0;
-    margin-right: 0.3ex;
-}
-
-@media (max-width: 540px) {
-    div.nbinput.container div.prompt,
-    div.nboutput.container div.prompt {
-        width: unset;
-        text-align: left;
-        padding: 0.4em;
-    }
-    div.nboutput.container div.prompt.empty {
-        padding: 0;
-    }
-
-    div.nbinput.container div.prompt > div,
-    div.nboutput.container div.prompt > div {
-        position: unset;
-    }
-}
-
-/* disable scrollbars on prompts */
-div.nbinput.container div.prompt pre,
-div.nboutput.container div.prompt pre {
-    overflow: hidden;
-}
-
-/* input/output area */
-div.nbinput.container div.input_area,
-div.nboutput.container div.output_area {
-    -webkit-flex: 1;
-    flex: 1;
-    overflow: auto;
-}
-@media (max-width: 540px) {
-    div.nbinput.container div.input_area,
-    div.nboutput.container div.output_area {
-        width: 100%;
-    }
-}
-
-/* input area */
-div.nbinput.container div.input_area {
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-    /*background: #f5f5f5;*/
-}
-
-/* override MathJax center alignment in output cells */
-div.nboutput.container div[class*=MathJax] {
-    text-align: left !important;
-}
-
-/* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput.container div.math p {
-    text-align: left;
-}
-
-/* standard error */
-div.nboutput.container div.output_area.stderr {
-    background: #fdd;
-}
-
-/* ANSI colors */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-default-inverse-fg { color: #FFFFFF; }
-.ansi-default-inverse-bg { background-color: #000000; }
-
-.ansi-bold { font-weight: bold; }
-.ansi-underline { text-decoration: underline; }
-
-
-div.nbinput.container div.input_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight].math,
-div.nboutput.container div.output_area.rendered_html,
-div.nboutput.container div.output_area > div.output_javascript,
-div.nboutput.container div.output_area:not(.rendered_html) > img{
-    padding: 5px;
-    margin: 0;
-}
-
-/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
-div.nbinput.container div.input_area > div[class^='highlight'],
-div.nboutput.container div.output_area > div[class^='highlight']{
-    overflow-y: hidden;
-}
-
-/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt .copybtn {
-    display: none;
-}
-
-/* Some additional styling taken form the Jupyter notebook CSS */
-.jp-RenderedHTMLCommon table,
-div.rendered_html table {
-  border: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-  color: black;
-  font-size: 12px;
-  table-layout: fixed;
-}
-.jp-RenderedHTMLCommon thead,
-div.rendered_html thead {
-  border-bottom: 1px solid black;
-  vertical-align: bottom;
-}
-.jp-RenderedHTMLCommon tr,
-.jp-RenderedHTMLCommon th,
-.jp-RenderedHTMLCommon td,
-div.rendered_html tr,
-div.rendered_html th,
-div.rendered_html td {
-  text-align: right;
-  vertical-align: middle;
-  padding: 0.5em 0.5em;
-  line-height: normal;
-  white-space: normal;
-  max-width: none;
-  border: none;
-}
-.jp-RenderedHTMLCommon th,
-div.rendered_html th {
-  font-weight: bold;
-}
-.jp-RenderedHTMLCommon tbody tr:nth-child(odd),
-div.rendered_html tbody tr:nth-child(odd) {
-  background: #f5f5f5;
-}
-.jp-RenderedHTMLCommon tbody tr:hover,
-div.rendered_html tbody tr:hover {
-  background: rgba(66, 165, 245, 0.2);
-}
-</style>
-<div class="admonition note">
-<p>This page was generated from <cite>notebooks/L4/2_Chemical_Potential.ipynb</cite>.
-<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/SoftMatterPhysics/main?urlpath=tree/source/notebooks/L4/2_Chemical_Potential.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+          <div class="admonition note">
+<p>This page was generated from <cite>notebooks/L4/2_Chemical_Pot-old.ipynb</cite>.
+<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/SoftMatterPhysics/main?urlpath=tree/source/notebooks/L4/2_Chemical_Pot-old.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
-<section id="Equilibration-of-the-chemical-potential">
-<h1>Equilibration of the chemical potential<a class="headerlink" href="#Equilibration-of-the-chemical-potential" title="Permalink to this headline">#</a></h1>
-<p>We have seen that for two compartments, e.g. bath and system, to be in equilibrium, their chemical potentials have to be equal to one another. If, for example, the system has a lower chemical potential, the total free energy can be lowered by moving particles from the bath into the system.</p>
-<p>The chemical potential is useful in many situations. For example, to determine</p>
+<section id="Chemical-Potential">
+<h1>Chemical Potential<a class="headerlink" href="#Chemical-Potential" title="Permalink to this headline">#</a></h1>
+<p>So far, we have considered either isolated systems, meaning that no energy nor particle exchange is possible, and closed systems, which allow an exchange of energy with a reservoir (bath). We will now have a look at a system that also allows an exchange of particles with a reservoir. For these systems, we will define the <strong>chemical potential</strong> <span class="math notranslate nohighlight">\(\mu\)</span> which we will identify as the <strong>free energy change when adding one molecule of a given species to a thermodynamic system</strong> at constant
+<span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>We consider a system of two components A and B in contact with a heat bath and a diffusive equilibrium between A and B.</p>
+<img alt="Chemical Potential" src="notebooks/L4/img/chem_pot.png" />
+<p>The total free energy of our system is then defined as</p>
+<p><span class="math">\begin{equation}
+G=G_{\mathrm A}+G_{\mathrm B}.
+\end{equation}</span></p>
+<p>The total number of particles in the system is also conserved and given by <span class="math notranslate nohighlight">\(N_{\rm tot}=N_{\mathrm A}+N_{\mathrm B}\)</span>. In equilibrium we require the free energy of the system to be a minimum with respect to the particle number such that:</p>
+<p><span class="math">\begin{equation}
+{\mathrm d}G=\frac{ \partial G_{\mathrm A}}{\partial N_{\mathrm A}}\bigg|_{T,p}{\mathrm d}N_{\mathrm A}+\frac{\partial G_{\mathrm B}}{\partial N_{\mathrm B}}\bigg|_{T,p}{\mathrm d}N_{\mathrm B}=\frac{ \partial G_{\mathrm A}}{\partial N_{\mathrm A}}\bigg|_{T,p}{\mathrm d}N_{\mathrm A}-\frac{\partial G_{\mathrm B}}{\partial N_{\mathrm B}}\bigg|_{T,p}{\mathrm d}N_{\mathrm A}=0.
+\end{equation}</span></p>
+<p>with <span class="math notranslate nohighlight">\({\mathrm d}N_{\mathrm A}=-{\mathrm d}N_{\mathrm B}\)</span>, since the total number of particles is conserved (i.e., <span class="math notranslate nohighlight">\(\mathrm{d}N_{\rm tot}=0\)</span>):</p>
+<p><span class="math">\begin{equation}
+\frac{\mathrm dG_{\mathrm A}}{\mathrm dN_{\mathrm A}}=\frac{\mathrm dG_{\mathrm B}}{\mathrm dN_{\mathrm B}}.
+\end{equation}</span></p>
+<p>Apparently, in equilibrium the change in the free energy of system <span class="math notranslate nohighlight">\(A\)</span> needs to be the same of system <span class="math notranslate nohighlight">\(B\)</span> when exchanging particles at constant <span class="math notranslate nohighlight">\(T,p\)</span>.</p>
+<div class="admonition warning">
+<p class="admonition-title"><strong>Chemical Potential</strong></p>
+<p>We can define a quantity</p>
+<p><span class="math">\begin{equation}
+\mu(T,p,N)=\frac{\mathrm dG}{\mathrm dN}\bigg|_{T,P}
+\end{equation}</span></p>
+<p>which is termed the <strong>chemical potential</strong>, which is the change in the free energy when adding a particle to the system. The chemical potential may be interpreted as the cost for adding one more particle (at constant <span class="math notranslate nohighlight">\(T,p\)</span>) to the system.</p>
+<p>Note</p>
+<ul class="simple">
+<li><p>if <span class="math notranslate nohighlight">\(\mu_l&lt;\mu_v\)</span> at constant <span class="math notranslate nohighlight">\(T,p\)</span>, we can lower the free energy by moving a particle from <span class="math notranslate nohighlight">\(v\)</span> to <span class="math notranslate nohighlight">\(l\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu_l\neq \mu_v\)</span> means non-equilibrium and partricles will diffuse until <span class="math notranslate nohighlight">\(\mu_l=\mu_v\)</span>.</p></li>
+</ul>
+</div>
+<p>We will have a closer look at the chemical potential with an example below. The previous condition states that the chemical potential of the two systems is the same in equilibrium. The chemical potential is useful in many situations. For example, to determine</p>
 <section id="Phase-equilibria">
 <h2>Phase equilibria<a class="headerlink" href="#Phase-equilibria" title="Permalink to this headline">#</a></h2>
 <img alt="Phase equilibrium" src="../../_images/phase_equilibria1.png" />
@@ -581,36 +354,6 @@ G_{\rm tot}=N_{\rm{H_{2}O}}\varepsilon_{\rm H_{2}O}+N_{\rm s}\varepsilon_{\rm s}
 \end{equation}</span></p>
 <p>which only has entropic contributions.</p>
 <div class="admonition note">
-<p class="admonition-title"><strong>Example: Ligand Binding</strong></p>
-<p>As an example, we have a look at the binding of a ligand (green) to a receptor, which is indicated in the figure below.</p>
-<img alt="Two State Binding" src="../../_images/two_state_binding.png" />
-<p>The binding is reported by the variable <span class="math notranslate nohighlight">\(\sigma\)</span>, which can be either 0 or 1. The binding energy is therefore</p>
-<p><span class="math">\begin{equation}
-E=\sigma \varepsilon_\mathrm{b}
-\end{equation}</span></p>
-<p>with <span class="math notranslate nohighlight">\(\varepsilon_\mathrm{b}&lt;0\)</span>, since the ligand wants to bind. The grand partition function</p>
-<p><span class="math">\begin{equation}
-Z=\sum_{\rm states}\exp\left ( -\beta (E_{\rm state}- \mu N_{\rm state}) \right ),
-\end{equation}</span></p>
-<p>in which the chemical potential <span class="math notranslate nohighlight">\(\mu\)</span> reflects the contact with the particle reservoir and <span class="math notranslate nohighlight">\(\beta=(k_\mathrm{B}T)^{-1}\)</span>, can therefore be written as:</p>
-<p><span class="math">\begin{equation}
-Z=\sum_{\sigma=0}^{1}\exp\left ( -\beta (\varepsilon_\mathrm{b} \sigma- \mu \sigma) \right )=1+\exp(-\beta (\varepsilon_\mathrm{b} -\mu )).
-\end{equation}</span></p>
-<p>From that we can calculate the mean number of bounded ligands to be</p>
-<p><span class="math">\begin{equation}
-\langle N \rangle =\frac{\exp(-\beta (\varepsilon_\mathrm{b} -\mu ))}{1+\exp(-\beta (\varepsilon_\mathrm{b} -\mu ))}.
-\end{equation}</span></p>
-<p>Using</p>
-<p><span class="math">\begin{equation}
-\mu = \mu_0 + k_\mathrm{B} T \ln \left ( \frac{c}{c_0}\right )
-\end{equation}</span></p>
-<p>we can finally write</p>
-<p><span class="math">\begin{equation}
-\langle N \rangle =\frac{c/c_0 \exp(-\beta \Delta \varepsilon_\mathrm{b})}{1+\frac{c}{c_0}\exp(-\beta \Delta \varepsilon_\mathrm{b})}
-\end{equation}</span></p>
-<p>with <span class="math notranslate nohighlight">\(\Delta \varepsilon_\mathrm{b}=\varepsilon_\mathrm{b}-\mu_0\)</span>, which is the energy freed when taking the ligand from the solution and placing it at the acceptor.</p>
-</div>
-<div class="admonition note">
 <p class="admonition-title"><strong>Example: Barometric height formula</strong></p>
 <p>We can have a look again at the barometric height formula using the framework of the chemical potential. Each height <span class="math notranslate nohighlight">\([h,h+\mathrm{d}h]\)</span> is exchanging particles with other heights until the chemical potential in all regions is the same. We can thus write</p>
 <p><span class="math">\begin{eqnarray}
@@ -637,14 +380,6 @@ Z=\sum_{\sigma=0}^{1}\exp\left ( -\beta (\varepsilon_\mathrm{b} \sigma- \mu \sig
 \end{equation}</span></p>
 <p>which is, of course, the barometric height formula.</p>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
 </script></section>
@@ -655,26 +390,8 @@ Z=\sum_{\sigma=0}^{1}\exp\left ( -\beta (\varepsilon_\mathrm{b} \sigma- \mu \sig
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="1_Osmotic_Pressure.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Osmotic Pressure</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="2_Gibbs_Distribution.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Particle exchange and chemical potential</div>
-                
-              </div>
-            </a>
+          
+          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -708,7 +425,7 @@ Z=\sum_{\sigma=0}^{1}\exp\left ( -\beta (\varepsilon_\mathrm{b} \sigma- \mu \sig
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Equilibration of the chemical potential</a><ul>
+<li><a class="reference internal" href="#">Chemical Potential</a><ul>
 <li><a class="reference internal" href="#Phase-equilibria">Phase equilibria</a></li>
 <li><a class="reference internal" href="#Chemical-equilibria">Chemical equilibria</a></li>
 </ul>
