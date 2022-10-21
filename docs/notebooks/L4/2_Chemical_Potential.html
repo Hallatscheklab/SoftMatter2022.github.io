@@ -543,15 +543,26 @@ S_{\rm mix}\approx -k_\mathrm{B} \left ( N_{\rm s} \ln \left ( \frac{N_{\rm s}}{
 <p><span class="math">\begin{equation}
 G_{\rm tot}=N_{\rm{H_{2}O}}\varepsilon_{\rm H_{2}O}+N_{\rm s}\varepsilon_{\rm s}+k_\mathrm{B} T \left ( N_{\rm s} \ln \left ( \frac{N_{\rm s}}{N_{\rm H_2O}}\right) -N_{\rm s}\right ).
 \end{equation}</span></p>
-<p>We can now come back and calculate the chemical potential of the solute as noted above</p>
-<p><span class="math">\begin{equation}
-\mu_{\rm s}=\epsilon_{\rm s}+k_{\rm B} T \ln \left ( \frac{N_{\rm s}}{N_{\rm H_2O}}\right ).
+<div class="line-block">
+<div class="line">We can now come back and calculate the chemical potential of the solute as noted above</div>
+<div class="line"><span class="math">\begin{equation}
+\mu_{\rm s}=\left( \frac{\partial G_{\rm tot}}{\partial N_{\rm s}}\right)\bigg|_{p,T}=\epsilon_{\rm s}+k_{\rm B} T \ln \left ( \frac{N_{\rm s}}{N_{\rm H_2O}}\right ).
+\end{equation}</span></div>
+</div>
+<p>To get the chemical potential of the solvent one has to take the derivative with respect to <span class="math notranslate nohighlight">\(N_{\rm H_2O}\)</span>, <span class="math">\begin{equation}
+\mu_{\rm H_2O}=\left(\frac{\partial G_{\rm tot}}{\partial N_{\rm H_2O}}\right)\bigg|_{T,p}=\epsilon_{\rm H_2O}-k_{\rm B} T \frac{N_{\rm s}}{N_{\rm H_2O}}.
 \end{equation}</span></p>
 <p>As we rather work with concentrations than number of molecules we can use <span class="math notranslate nohighlight">\(c=N_{\rm s}/V\)</span> and <span class="math notranslate nohighlight">\(c_0=c_{\rm H_2O}=N_{\rm H_2O}/V\)</span> to write</p>
-<p><span class="math">\begin{equation}
+<div class="line-block">
+<div class="line"><span class="math">\begin{equation}
 \mu_{\rm s}=\epsilon_{\rm s}+k_{\rm B} T \ln \left ( \frac{c}{c_0}\right ).
-\end{equation}</span></p>
+\end{equation}</span></div>
+<div class="line"><span class="math">\begin{equation}
+\mu_{\rm H_2O}=\epsilon_{\rm H_2O}-k_{\rm B} T \frac{c}{c_0}.
+\end{equation}</span></div>
+</div>
 <p>The value of <span class="math notranslate nohighlight">\(c_0\)</span> thereby acts as a reference point, which is commonly chosen to be at <span class="math notranslate nohighlight">\(c_0=1\,{\rm M}\)</span>. The value of <span class="math notranslate nohighlight">\(\epsilon_{\rm s}\)</span> is termed the standard chemical potential <span class="math notranslate nohighlight">\(\mu_{\rm s}^{0}\)</span>. The standard chemical potential is measured at standard thermodynamic conditions, i.e. <span class="math notranslate nohighlight">\(p_0=101.3\, {\rm kPa}\)</span> and <span class="math notranslate nohighlight">\(T=293.15\, {\rm K}\)</span>, and <span class="math notranslate nohighlight">\(c_0=1\, {\rm M}\)</span>.</p>
+<p>** Remember: The chemical potential of the minority phase (solutes) has a <em>logarithimc</em> dependence on the concentration of solutes. The dependence is instead <em>linear</em> in the case of the majority phase (solvent).**</p>
 </div>
 <p>In a mixed system, we define the chemical potential of a component <span class="math notranslate nohighlight">\(i\)</span> as the sum of two components</p>
 <p><span class="math">\begin{equation}
@@ -567,7 +578,7 @@ G_{\rm tot}=N_{\rm{H_{2}O}}\varepsilon_{\rm H_{2}O}+N_{\rm s}\varepsilon_{\rm s}
 </li>
 <li><p>The logarithm term <span class="math notranslate nohighlight">\(k_\mathrm{B} T \ln \left ( \frac{c_i}{c_{i0}}\right )\)</span> is the pure mixing/dilution entropy reflecting the different abundance of solute and solvent due to the resulting numbers of microstates.</p></li>
 </ul>
-<p>For a solvent we consequently write</p>
+<p>To get the chemical potential of the solvent one has to take the derivative with respect to <span class="math notranslate nohighlight">\(N_{\rm H_2O}\)</span>,</p>
 <p><span class="math">\begin{equation}
 \mu_{\rm H_2O}=\frac{\partial G_{\rm tot}}{\partial N_{\rm H_2O}}\bigg|_{T,p}=\mu_{\rm H_2O}^{0}-k_\mathrm{B} T\ln\left ( \frac{c_{\rm s}}{c_{\rm H_2O}}\right).
 \end{equation}</span></p>
@@ -681,7 +692,7 @@ Z=\sum_{\sigma=0}^{1}\exp\left ( -\beta (\varepsilon_\mathrm{b} \sigma- \mu \sig
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Oct 20, 2022</div>
+              Last updated on Oct 21, 2022</div>
           </div>
           <div class="right-details">
             <div class="icons">
