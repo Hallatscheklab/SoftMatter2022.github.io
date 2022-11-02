@@ -31,12 +31,14 @@ Welcome to Soft Matter Physics Lecture Website!
    notebooks/L4/1_Osmotic_Pressure.ipynb
    
    
-Henri's lectures:
-=================
+Lectures held Nov. 25 and later:
+================================
 
 :download:`Binding, Cooperativity (25.10.)  <notebooks/L5/SMP_Lecture05_Binding+Cooperativity_HF.pdf>`.
 
 :download:`Phase transitions (27.10.) <notebooks/L6/SMP_Lecture06_Phase-transition_HF.pdf>`.
+
+:download:`Reaction Dynamics (2.11.) <notebooks/L7/07_Lecture_ReactionDynamics.pdf>`; :download:`Slides (2.11.) <notebooks/L7/07_ReactionDynamics.pdf>`.
 
 
    
