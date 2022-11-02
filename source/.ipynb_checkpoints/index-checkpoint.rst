@@ -21,7 +21,7 @@ Welcome to Soft Matter Physics Lecture Website!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Lecture 1-2:
+   :caption: Lectures:
 
    notebooks/L1/2_Intro_to_Stat_Phys_OH.ipynb
    notebooks/L2/Intro_to_Stat_Phys_2_OH.ipynb
@@ -29,6 +29,18 @@ Welcome to Soft Matter Physics Lecture Website!
    notebooks/L4/2_Gibbs_Distribution.ipynb
    notebooks/L4/2_Chemical_Potential.ipynb
    notebooks/L4/1_Osmotic_Pressure.ipynb
+   
+   
+Henri's lectures:
+=================
+
+:download:`Binding, Cooperativity (25.10.)  <notebooks/L5/SMP_Lecture05_Binding+Cooperativity_HF.pdf>`.
+
+:download:`Phase transitions (27.10.) <notebooks/L6/SMP_Lecture06_Phase-transition_HF.pdf>`.
+
+
+   
+
 
 ..
    .. toctree::
