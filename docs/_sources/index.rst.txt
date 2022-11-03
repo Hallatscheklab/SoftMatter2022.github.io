@@ -38,7 +38,9 @@ Lectures held Nov. 25 and later:
 
 :download:`Phase transitions (27.10.) <notebooks/L6/SMP_Lecture06_Phase-transition_HF.pdf>`.
 
-:download:`Reaction Dynamics (2.11.) <notebooks/L7/07_Lecture_ReactionDynamics.pdf>`; :download:`Slides (2.11.) <notebooks/L7/07_ReactionDynamics.pdf>`.
+:download:`Reaction Dynamics (2.11.) <notebooks/L7/07_Lecture_ReactionDynamics.pdf>`; :download:`Slides <notebooks/L7/07_ReactionDynamics.pdf>`.
+
+:download:`Molecular Motors (3.11.) <notebooks/L8/08_Lecture_DynamicsMolecularMotors.pdf>`; :download:`Slides <notebooks/L8/08_DynamicsMolecularMotors.pdf>`.
 
 
    
