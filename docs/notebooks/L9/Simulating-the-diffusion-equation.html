@@ -468,6 +468,7 @@ div.rendered_html tbody tr:hover {
 <p>This page was generated from <cite>notebooks/L9/Simulating-the-diffusion-equation.ipynb</cite>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/SoftMatterPhysics/main?urlpath=tree/source/notebooks/L9/Simulating-the-diffusion-equation.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
+<p><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></p>
 <section id="Simulating-Molecular-Motors-walking-down-a-microtubule">
 <h1>Simulating Molecular Motors walking down a microtubule<a class="headerlink" href="#Simulating-Molecular-Motors-walking-down-a-microtubule" title="Permalink to this headline">#</a></h1>
 <p>In lecture, we discussed the evolution of the positional distribution function of a molecular motor that processively walks down a biopolymer (e.g. Kinesin V walking down a microtubule). In the simplest models, this distribution function satisfies a Smoluchowski equation of the following form. The probability density to observe the walker at position <span class="math notranslate nohighlight">\(x\)</span> at time <span class="math notranslate nohighlight">\(t\)</span> is given by</p>
@@ -479,7 +480,7 @@ div.rendered_html tbody tr:hover {
 <p>Here, we’d like to directly time integrate the above equation to see how the pdf evolves over time.</p>
 <p>Initializing the simulation</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -518,7 +519,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>The core simulation algorithm.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_timestep</span><span class="p">(</span><span class="n">u0</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
@@ -534,7 +535,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>Running the simulations and plotting the output at regular time intervals</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u0</span> <span class="o">=</span> <span class="n">uini</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -561,13 +562,13 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_10_0.png" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_10_0.png" />
+<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_11_0.png" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_11_0.png" />
 </div>
 </div>
 <section id="In-the-co-moving-frame">
 <h2>In the co-moving frame<a class="headerlink" href="#In-the-co-moving-frame" title="Permalink to this headline">#</a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u0</span> <span class="o">=</span> <span class="n">uini</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -597,7 +598,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_12_0.png" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_12_0.png" />
+<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_13_0.png" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_13_0.png" />
 </div>
 </div>
 </section>
@@ -605,7 +606,7 @@ div.rendered_html tbody tr:hover {
 <h2>Diffusion equation without bias<a class="headerlink" href="#Diffusion-equation-without-bias" title="Permalink to this headline">#</a></h2>
 <p>Only works far away from the boundaries.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_timestep</span><span class="p">(</span><span class="n">u0</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
@@ -619,7 +620,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u0</span> <span class="o">=</span> <span class="n">uini</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -646,7 +647,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_16_0.png" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_16_0.png" />
+<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_17_0.png" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_17_0.png" />
 </div>
 </div>
 </section>
@@ -654,7 +655,7 @@ div.rendered_html tbody tr:hover {
 <h2>Diffusion in two dimensions<a class="headerlink" href="#Diffusion-in-two-dimensions" title="Permalink to this headline">#</a></h2>
 <p>An example of a two dimensional diffusion process is the diffusion of heat from a circular source across a rectangular plate. The initial temperature is <code class="docutils literal notranslate"><span class="pre">Tcold</span></code> and the temperature of the heat source is <code class="docutils literal notranslate"><span class="pre">Thot</span></code>.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -733,7 +734,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_20_1.png" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_20_1.png" />
+<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_21_1.png" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_21_1.png" />
 </div>
 </div>
 <section id="Charges-surfaces-in-solution,-no-salt">
@@ -763,7 +764,7 @@ ze\rho =-\epsilon_0 \epsilon \frac{d^{2}\psi}{dx^2}\tag{Poisson equation}
 \end{equation}</span></p>
 <p>the Poisson-Boltzmann equation, which is a non-linear differential equation in the potential <span class="math notranslate nohighlight">\(\psi\)</span> and therefore difficult to solve.</p>
 <p>In the following we would like to determine the surface values for the potential <span class="math notranslate nohighlight">\(\psi_s\)</span>, the electric field <span class="math notranslate nohighlight">\(E_s\)</span> and the density <span class="math notranslate nohighlight">\(\rho_s\)</span>, which are called contact values. We will do that for a system of two solid surfaces each with a surface charge density <span class="math notranslate nohighlight">\(\sigma\)</span> according to the configuration shown below.</p>
-<img alt="Config" src="../../_images/configuration.png" />
+<img alt="Config" src="https://github.com/Hallatscheklab/SoftMatter22-23/blob/main/source/notebooks/L9/img/configuration.png?raw=1" />
 <p>This system is symmetric with respect to the mid-plane at <span class="math notranslate nohighlight">\(x=0\)</span> and thus the potential is <span class="math notranslate nohighlight">\(\psi_0=\psi(x=0)=0\)</span> and the charge number density is <span class="math notranslate nohighlight">\(\rho_o=\rho(x=0)\)</span>. Also, due to symmetry we have <span class="math notranslate nohighlight">\(\frac{d\psi}{dx}|_{x=0}=0\)</span>. It follows from this symmetry that</p>
 <p><span class="math">\begin{equation}
 \sigma=-\int_{0}^{D / 2} z e q d x=\epsilon_{0} \epsilon \int_0^{D / 2}\left(\frac{d^{2} \psi}{d x^{2}}\right)^{2} dx=-\epsilon_{0} \epsilon\left(\frac{d \psi}{d x}\right)|_{D / 2}=-\epsilon_{0} \epsilon\left(\frac{d \psi}{d x}\right)|_{S}=-\epsilon_0 \epsilon E_{s}
@@ -823,7 +824,7 @@ KTK=\frac{ze\sigma}{2k_B T\epsilon_0\epsilon}
 \end{equation}</span></p>
 <p>which shall be equal to <span class="math notranslate nohighlight">\(K\tan\left (KD/2\right )\)</span>.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[225]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sigma</span><span class="o">=</span><span class="mf">0.2</span> <span class="c1"># C/m^2</span>
@@ -837,7 +838,7 @@ KTK=\frac{ze\sigma}{2k_B T\epsilon_0\epsilon}
 </div>
 <p>With the help of the previous definitions, we may search for the solution which gives the value of <span class="math notranslate nohighlight">\(K\)</span>.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[226]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># numerically solve for K</span>
@@ -848,7 +849,7 @@ KTK=\frac{ze\sigma}{2k_B T\epsilon_0\epsilon}
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[227]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ion density in the mid plane</span>
@@ -857,7 +858,7 @@ KTK=\frac{ze\sigma}{2k_B T\epsilon_0\epsilon}
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[228]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ion density in the gap</span>
@@ -873,11 +874,11 @@ KTK=\frac{ze\sigma}{2k_B T\epsilon_0\epsilon}
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_34_0.png" class="no-scaled-link" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_34_0.png" style="width: 397px; height: 298px;" />
+<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_35_0.png" class="no-scaled-link" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_35_0.png" style="width: 397px; height: 298px;" />
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[229]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># potential in the gap</span>
@@ -889,8 +890,7 @@ KTK=\frac{ze\sigma}{2k_B T\epsilon_0\epsilon}
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[229]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
@@ -901,11 +901,11 @@ Text(0, 0.5, &#39;electric potential [V]&#39;)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_36_1.png" class="no-scaled-link" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_36_1.png" style="width: 437px; height: 281px;" />
+<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_37_1.png" class="no-scaled-link" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_37_1.png" style="width: 437px; height: 281px;" />
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[232]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># field in the gap</span>
@@ -917,8 +917,7 @@ Text(0, 0.5, &#39;electric potential [V]&#39;)
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[232]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
@@ -929,7 +928,7 @@ Text(0, 0.5, &#39;electric field [V/m]&#39;)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_38_1.png" class="no-scaled-link" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_38_1.png" style="width: 408px; height: 298px;" />
+<img alt="../../_images/notebooks_L9_Simulating-the-diffusion-equation_39_1.png" class="no-scaled-link" src="../../_images/notebooks_L9_Simulating-the-diffusion-equation_39_1.png" style="width: 408px; height: 298px;" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -940,9 +939,7 @@ Text(0, 0.5, &#39;electric field [V/m]&#39;)
 </pre></div>
 </div>
 </div>
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {}, "version_major": 2, "version_minor": 0}
-</script></section>
+</section>
 </section>
 
         </article>
