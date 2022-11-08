@@ -29,18 +29,12 @@ Welcome to Soft Matter Physics Lecture Website!
    notebooks/L4/2_Gibbs_Distribution.ipynb
    notebooks/L4/2_Chemical_Potential.ipynb
    notebooks/L4/1_Osmotic_Pressure.ipynb
+   notebooks/L9/Simulating-the-diffusion-equation.ipynb
    
    
-Lectures held Nov. 25 and later:
-================================
+Lecture materials held on Nov. 25 and later can be found on the `Moodle course website <https://moodle2.uni-leipzig.de/course/view.php?id=41092>`_
+=====================================================================================
 
-:download:`Binding, Cooperativity (25.10.)  <notebooks/L5/SMP_Lecture05_Binding+Cooperativity_HF.pdf>`.
-
-:download:`Phase transitions (27.10.) <notebooks/L6/SMP_Lecture06_Phase-transition_HF.pdf>`.
-
-:download:`Reaction Dynamics (2.11.) <notebooks/L7/07_Lecture_ReactionDynamics.pdf>`; :download:`Slides <notebooks/L7/07_ReactionDynamics.pdf>`.
-
-:download:`Molecular Motors (3.11.) <notebooks/L8/08_Lecture_DynamicsMolecularMotors.pdf>`; :download:`Slides <notebooks/L8/08_DynamicsMolecularMotors.pdf>`.
 
 
    
