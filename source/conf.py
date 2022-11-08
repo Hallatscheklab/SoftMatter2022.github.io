@@ -54,7 +54,9 @@ mathjax3_config = {
 #
 #import sphinx_rtd_theme
 
-html_theme = 'furo'
+html_theme = 'sphinx_book_theme'
+
+# html_theme = 'furo'
 # html_theme_path = [furo.get_html_theme_path()]
 
 #def setup(app):
@@ -71,7 +73,8 @@ html_last_updated_fmt = ""
 #
 
 html_theme_options = {
-#    "collapse_navigation" : False
+    "repository_url": "https://github.com/Hallatscheklab/SoftMatter22-23.git",
+    "use_repository_button": True,
 }
 
 
