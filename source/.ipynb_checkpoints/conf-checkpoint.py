@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Soft Matter Lecture'
+project = 'Soft Matter Course'
 copyright = '2022, Oskar Hallatschek, Frank Cichos, Ralf Seidel'
 author = 'Oskar Hallatschek, Frank Cichos, Ralf Seidel'
 master_doc = 'index'
@@ -115,21 +115,23 @@ html_theme_options = {
 # html_sidebars = {}
 
 
-html_context = {
+#html_context = {
     # Enable the "Edit in GitHub link within the header of each page.
-    'display_github': True,
+#    'display_github': True,
     # Set the following variables to generate the resulting github URL for each page.
     # Format Template: https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}
-    'github_user': 'fcichos',
-    'github_repo': 'SoftMatterPhysics',
-    'github_version': 'main/',
-    'conf_py_path': '/source/'
-}
+#    'github_user': 'fcichos',
+#    'github_repo': 'SoftMatterPhysics',
+#    'github_version': 'main/',
+#    'conf_py_path': '/source/'
+#}
 
-html_logo = 'img/mona_logo.png'
+html_logo = 'img/SM-painting.png'
 
 # -- Extension configuration -------------------------------------------------
 # This is processed by Jinja2 and inserted before each notebook
+
+#        :raw-html:`<br/><a #href="https://mybinder.org/v2/gh/fcichos/SoftMatterPhysics/main?#urlpath=tree/source/{{ docname }}"><img alt="Binder badge" #src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-#align:text-bottom"></a>`
 
 nbsphinx_prolog = r"""
 {% set docname = env.doc2path(env.docname, base=False) %}
@@ -143,7 +145,12 @@ nbsphinx_prolog = r"""
         This page was generated from `{{ docname }}`.
         :raw-html:`<br/><a href="https://mybinder.org/v2/gh/fcichos/SoftMatterPhysics/main?urlpath=tree/source/{{ docname }}"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a>`
 
+
 .. only:: latex
+
+
+
+
 
     The following section was created from :file:`{{ docname }}`.
 """

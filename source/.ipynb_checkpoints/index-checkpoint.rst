@@ -2,7 +2,7 @@
    sphinx-quickstart on Tue Mar 31 12:45:28 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
-.. figure:: img/FluffyParticles.png
+.. figure:: img/SM-Dall-E.png
 
 Welcome to Soft Matter Physics Lecture Website!
 ===============================================
