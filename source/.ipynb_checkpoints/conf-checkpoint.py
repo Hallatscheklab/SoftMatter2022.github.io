@@ -31,6 +31,15 @@ release = '22'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+
+#extensions = [
+#    "numpydoc",
+#    "sphinx.ext.autodoc",
+#    "sphinx.ext.intersphinx",
+#    "sphinx.ext.viewcode",
+    # For the kitchen sink
+#]
+
 extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
@@ -73,8 +82,20 @@ html_last_updated_fmt = ""
 #
 
 html_theme_options = {
+    "path_to_docs": "docs",
     "repository_url": "https://github.com/Hallatscheklab/SoftMatter22-23.git",
+    "launch_buttons": {
+        "binderhub_url": "https://mybinder.org",
+        "colab_url": "https://colab.research.google.com/",
+        # "jupyterhub_url": "https://datahub.berkeley.edu",  # For testing
+    },
     "use_repository_button": True,
+    "use_edit_page_button": True,
+    "use_issues_button": True,
+    "use_repository_button": True,
+    "use_download_button": True,
+    "use_sidenotes": True,
+    "logo_only": True,
 }
 
 
