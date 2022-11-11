@@ -688,7 +688,7 @@ div.rendered_html tbody tr:hover {
 </style>
 <div class="admonition note">
 <p>This page was generated from <cite>notebooks/L10/1_van_der_Waals.ipynb</cite>.
-<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/SoftMatterPhysics/main?urlpath=tree/source/notebooks/L10/1_van_der_Waals.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+<span class="raw-html"><br/><a href="https://colab.research.google.com/github/Hallatscheklab/SoftMatter22-23/blob/main/source/notebooks/L10/1_van_der_Waals.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></span></p>
 </div>
 <section id="van-der-Waals-Interactions">
 <h1>van der Waals Interactions<a class="headerlink" href="#van-der-Waals-Interactions" title="Permalink to this headline">#</a></h1>
@@ -702,7 +702,7 @@ div.rendered_html tbody tr:hover {
 <li><p>not additive</p></li>
 </ul>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[150]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -774,7 +774,7 @@ w(r)+E_{\mathrm{kin}}=-\frac{3 \alpha_{0}^{2}}{4\left(4 \pi \epsilon_{0}\right)^
 <li><p>Ar: <span class="math notranslate nohighlight">\(\sigma=3.76\)</span> Angstroem, <span class="math notranslate nohighlight">\(h\nu_I=15.8\)</span> eV, <span class="math notranslate nohighlight">\(\frac{\alpha_0}{4\pi \epsilon_0}=1.63\times 10^{-30}\)</span> m<span class="math notranslate nohighlight">\(^{-3}\)</span>, from which we obtain a boiling temperature of <span class="math notranslate nohighlight">\(T_{\rm b}=85\)</span> K, which nicely corresponds to the experimental value of <span class="math notranslate nohighlight">\(T_{\rm b}=87\)</span> K</p></li>
 </ul>
 </div>
-<img alt="Dispersion Interaction" src="../../_images/c_disp.png" />
+<img alt="Dispersion Interaction" src="https://github.com/Hallatscheklab/SoftMatter22-23/blob/main/source/notebooks/L10/img/c_disp.png?raw=1" />
 <p>While the theory above provides us only with some idea about the disperion interaction, we can now summarize all three controbution to the van der Waals interaction</p>
 <p><span class="math">\begin{equation}
 w_{\rm vdW}(r)=-\underbrace{\frac{u_{1}^{2} u_{2}^{2}}{3 k_{\mathrm{B}} T\left(4 \pi \epsilon_{0} \right)^{2} r^{6}}}_{\text {Keesom }}-\underbrace{\frac{u_{1}^{2} \alpha_{02}+u_{2}^{2} \alpha_{01}}{\left(4 \pi \epsilon_{0} \right)^{2} r^{6}}}_{\text {Debye }}-\underbrace{\frac{3 h\nu_1\nu_2 \alpha_{01} \alpha_{02}}{\left(4 \pi \epsilon_{0} \right)^{2} 2(\nu_1+\nu_2)r^{6}}}_{\text {London} }
@@ -784,7 +784,7 @@ w_{\rm vdW}(r)=-\underbrace{\frac{u_{1}^{2} u_{2}^{2}}{3 k_{\mathrm{B}} T\left(4
 w_{\rm vdW}(r)=-\frac{C_{\rm vdW}}{r^6}=-\frac{C_{\rm Debye}+C_{\rm Keesom}+C_{\rm disp}}{r^6}
 \end{equation}</span></p>
 <p>The individual contributions have different strength, but it is not difficult to see that the dispersion interaction is typically the biggest one as shown in the table below. The reason for that is the ionization potential and we will address this issue later in the section of the McLachlan theory.</p>
-<img alt="Comparison vdW" src="../../_images/comp_vdw.png" />
+<img alt="Comparison vdW" src="https://github.com/Hallatscheklab/SoftMatter22-23/blob/main/source/notebooks/L10/img/comp_vdw.png?raw=1" />
 </section>
 <section id="McLachlan-Theory">
 <h2>McLachlan Theory<a class="headerlink" href="#McLachlan-Theory" title="Permalink to this headline">#</a></h2>
@@ -793,7 +793,7 @@ w_{\rm vdW}(r)=-\frac{C_{\rm vdW}}{r^6}=-\frac{C_{\rm Debye}+C_{\rm Keesom}+C_{\
 w_{\mathrm{vdW}}(r)=-\frac{6 k_{\mathrm{B}} T}{\left(4 \pi \epsilon_{0}\right)^{2} r^{6}} \sum_{n=0}^{\infty}{}^{\prime} \frac{\alpha_{1}\left(i v_{n}\right) \alpha_{2}\left(i v_{n}\right)}{\epsilon_{3}^{2}\left(i v_{n}\right)}
 \end{equation}</span></p>
 <p>The <span class="math notranslate nohighlight">\(\sum^{\prime}\)</span> notation denotes that the first term in the summation is multiplied by <span class="math notranslate nohighlight">\(1/2\)</span>. The frequencies are sampled, only at discreet values that <span class="math notranslate nohighlight">\(h v_{n}=2 \pi k_{\mathrm{B}} \operatorname{Tn}\)</span> (known as the Matsubara frequencies). The typical <span class="math notranslate nohighlight">\(\alpha(i v)-v\)</span> plots of polar and non-polar molecules using the Lorentz model can be seen in the Figure below.</p>
-<img alt="Polarizability" src="../../_images/polarizability.png" />
+<img alt="Polarizability" src="https://github.com/Hallatscheklab/SoftMatter22-23/blob/main/source/notebooks/L10/img/polarizability.png?raw=1" />
 <section id="Frequency-Dependent-Polarizability">
 <h3>Frequency Dependent Polarizability<a class="headerlink" href="#Frequency-Dependent-Polarizability" title="Permalink to this headline">#</a></h3>
 <p>The electronic polarizability of a single atom can classically be approximated by a damped harmonic oscillator, i.e.</p>
@@ -805,7 +805,7 @@ m_{e}\ddot{x}+\Gamma m_e \dot{x}+m_e \omega_0^2  x=-e E(\omega)
 \alpha(\nu)=\frac{\alpha_0}{1-i\Gamma \frac{\nu}{\nu_0^2}-\left ( \frac{\nu}{\nu_0}\right)^2}
 \end{equation}</span></p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[151]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alpha</span><span class="p">(</span><span class="n">nu</span><span class="p">,</span><span class="n">nu_0</span><span class="p">,</span><span class="n">gamma</span><span class="p">):</span>
@@ -814,7 +814,7 @@ m_{e}\ddot{x}+\Gamma m_e \dot{x}+m_e \omega_0^2  x=-e E(\omega)
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[152]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nu</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">1e5</span><span class="p">,</span><span class="mf">1e17</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
@@ -822,7 +822,7 @@ m_{e}\ddot{x}+\Gamma m_e \dot{x}+m_e \omega_0^2  x=-e E(\omega)
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[153]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -872,9 +872,7 @@ w(\nu>0, r)=-\frac{3 \alpha_{01} \alpha_{02}}{2\left(4 \pi \epsilon_{0}\right)^{
 \end{equation}</span></p>
 <p>which is finally the London form of dispersion energy. Now we know why this interaction is called “dispersion”. The largest contribution to the energy comes from the range where <span class="math notranslate nohighlight">\(v\)</span> is close to <span class="math notranslate nohighlight">\(v_{\mathrm{I}}\)</span>. Since <span class="math notranslate nohighlight">\(v_{\mathrm{I}}\)</span> is usually in UV range, such interaction is dominated by the polarizabilities from Vis to UV frequencies. As the polarizability and permittivity are closely related to the dispersion of light, it is not hard to understand why it is originally
 coined as “dispersion interaction”.</p>
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {}, "version_major": 2, "version_minor": 0}
-</script></section>
+</section>
 </section>
 </section>
 

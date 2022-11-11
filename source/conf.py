@@ -143,7 +143,7 @@ nbsphinx_prolog = r"""
 
     .. nbinfo::
         This page was generated from `{{ docname }}`.
-        :raw-html:`<br/><a href="https://mybinder.org/v2/gh/fcichos/SoftMatterPhysics/main?urlpath=tree/source/{{ docname }}"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a>`
+        :raw-html:`<br/><a href="https://colab.research.google.com/github/Hallatscheklab/SoftMatter22-23/blob/main/source/{{ docname }}" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>`
 
 
 .. only:: latex
