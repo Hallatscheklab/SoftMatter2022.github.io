@@ -29,11 +29,15 @@ Welcome to Soft Matter Physics Lecture Website!
    notebooks/L4/2_Gibbs_Distribution.ipynb
    notebooks/L4/2_Chemical_Potential.ipynb
    notebooks/L4/1_Osmotic_Pressure.ipynb
-   notebooks/L9/Simulating-the-diffusion-equation.ipynb
    
    
-Lecture materials held on Nov. 25 and later can be found on the `Moodle course website <https://moodle2.uni-leipzig.de/course/view.php?id=41092>`_
-=====================================================================================
+Most of the lecture materials held on Nov. 25 and later can be found on the `Moodle course website <https://moodle2.uni-leipzig.de/course/view.php?id=41092>`_. Below are some supplementary notebooks, containing numerics and simulations.
+
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/L9/Simulating-the-diffusion-equation.ipynb
+
 
 
 
